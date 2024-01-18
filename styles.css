@@ -1,7 +1,26 @@
-h1{
+h1 {
     font-family: 'Monoton', sans-serif;
     font-size: 4vw;
+    padding: 1vw; 
+    display: inline-block; 
+
+    animation-name: colorChange;
+    animation-duration: 7s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
 }
+
+@keyframes colorChange {
+    0%, 10%, 90%, 100% {
+        background-color: white;
+        color: black;
+    }
+    40%, 60% {
+        background-color: black;
+        color: white;
+    }
+}
+
 
 h2 {
     color: #000;
@@ -10,6 +29,7 @@ h2 {
     font-weight: 600;
     margin-bottom: -0.2em;
 }
+
 p {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 300;
