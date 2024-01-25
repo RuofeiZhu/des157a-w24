@@ -1,8 +1,7 @@
-html {
-    scroll-behavior: smooth;
+*{
+    box-sizing:border-box;
 }
-
-
+/* -------- header --------*/
 .header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +26,7 @@ main {
     padding: 2%;
 }
 
-/* row1 */
+/* -------- row1 --------*/
 
 /* .journal {
     display: flex;
@@ -43,7 +42,9 @@ main {
 .row1 {
     display: flex;
     flex-direction: row;
-    background-color: #FFE687;
+    border-top: #000 2px solid; 
+    border-left: #000 2px solid; 
+    border-right: #000 2px solid; 
 }
 
 .row1 p{
@@ -54,10 +55,6 @@ main {
     font-size: 1em;
     line-height: 1.4em;
 }
-
-/* .text{
-    background-color: #FFE687;
-} */
 
 h3{
     padding:2%;
@@ -82,6 +79,7 @@ h3 a{
     width: 25%; 
     background-color: #F8AFCA;
     padding: auto;
+    /* border-left: #000 2px solid; */
 }
 
 .row1 h2 {
@@ -92,12 +90,14 @@ h3 a{
 }
 
 
-/* row2 */
+/* -------- row2 --------*/
 .row2 {
     display: flex;
     flex-direction: row;
-    background-color: #A7CC38;
+    border: #000 2px solid;
+    align-items: flex-start;
 }
+
 
 
 .row2 img {
@@ -105,6 +105,7 @@ h3 a{
     width: 25%; 
     padding: auto;
     background-color: #68BDBA;
+    /* border-right: #000 2px solid; */
 }
 
 .row2 h2 {
@@ -123,10 +124,16 @@ h3 a{
     line-height: 1.4em;
 }
 
+
+/* -------- footer --------*/
 footer {
     text-align: center;
     padding: 10px;
     border-top: 1px solid #000;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1em;
 }
 
 footer a{
@@ -134,9 +141,11 @@ footer a{
     color: #000;
 }
 
-
+/* -------- button --------*/
 .button1{
-    background-color: #F5772D; 
+    /* background-color: #F5772D;  */
+    background-color: #68BDBA;
+    border: #000 2px;
     border: none;
     color: white;
     padding: 14px 28px;
@@ -150,51 +159,15 @@ footer a{
 }
 
 .button1:hover {
-    background-color: #F8AFCA;
+    background-color: #b7eae8;
 }
 .read {
     text-decoration: none;
     color:#000;
 }
 
-/*-------- journal content 1 --------*/
-.thoughts div{
-    padding-left: 20%;
-    padding-right: 20%;
-}
 
-body{
-    background-color: #316443;
-}
-
-.main1{
-    background-color: #FFE687;
-}
-
-i a{
-    color: #000;
-}
-h2{
-    font-family: 'Libre Franklin', sans-serif;
-    font-weight: 500;
-    font-size: 1.5em;
-    line-height: 1.4em;
-}
-p{
-    font-family: 'Libre Franklin', sans-serif;
-    font-weight: 300;
-    font-size: 1em;
-    line-height: 1.4em;
-}
-nav a{
-    font-family: 'Libre Franklin', sans-serif;
-    font-weight: 300;
-    font-size: 1em;
-    line-height: 1.4em;
-}
-
-
-
+/* -------- mobile --------*/
 @media (max-width: 800px) { 
     .row1, .row2 {
         flex-direction: column;
@@ -212,5 +185,8 @@ nav a{
         order: 2; 
         width: 50%; 
         height: auto; 
+    }
+    main{
+        align-items: center;
     }
 }

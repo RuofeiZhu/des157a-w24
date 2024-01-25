@@ -1,0 +1,90 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 2vw;
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+.title {
+    font-family: 'Monoton', sans-serif;
+    font-size: 4vw;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #000;
+}
+
+footer a{
+    /* text-decoration: none; */
+    color: #000;
+}
+
+/*-------- special journal content 1 --------*/
+.thoughts div{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+body{
+    background-color: #fff;
+}
+
+.main1{
+    /* background-color: #FFE687; */
+    border: #000 2px;
+}
+
+i a{
+    color: #000;
+}
+h2{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.4em;
+}
+p{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+nav a{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+img{
+    width: 70%;
+}
+
+.main1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 3%;
+}
+
+article{
+    padding: 0 15%;
+}
+aside{
+    padding: auto;
+    width: 100%;
+}
