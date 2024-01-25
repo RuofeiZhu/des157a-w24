@@ -27,7 +27,7 @@ h2 {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 1.3em;
     font-weight: 600;
-    margin-bottom: -0.2em;
+    margin-bottom: -0.3em;
 }
 
 p {
@@ -124,7 +124,7 @@ span:before, span:after {
     height: 1.5px;
     top: 80%;
     margin-top: -0.5px;
-    background: #000;
+    background: linear-gradient(270deg, #F8AFCA, #F5772D, #68BDBA, #316443);
 }
   
 span:before {
@@ -132,12 +132,12 @@ span:before {
   }
 span:after {
     right: 2.5px;
-    background: #000;
+    /* background: #316443; */
     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
   
 span:hover:before {
-    background: #000;
+    /* background: #316443; */
     width: 100%;
     transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
