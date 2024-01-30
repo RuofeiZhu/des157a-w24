@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+    <h2 id="name">Your Favorite Dish</h2>
+    <img id="image" src="" alt="Favorite Dish" style="max-width: 300px;">
+
+    <script>
+        var userInput = prompt("Enter a food in the list to see my favorite dishes made with them (tomato, lamb, crawfish, pork):");
+        var dish = getFavDish(userInput);
+
+        // initialize the page content based on user input
+        updatePage();
+        
+        //checks if a valid dish or not
+        function updatePage() {
+            if (dish) {
+                document.getElementById("name").innerText = dish.name;
+                document.getElementById("image").src = dish.image;
+            } else {
+                document.getElementById("name").innerText = "No such dish found!";
+            }
+        }
+
+        //defined function, not run until user inputs
+        function getFavDish(food) {
+            var dishes = {
+                //maps food items to their corresponding favorite dish
+                "tomato": { "name": "Stir-fried Tomato and Scrambled Eggs", "image": "photos/tomato.JPG" },
+                "lamb": { "name": "Lamb Spine Hot Pot", "image": "photos/lamb.JPG" },
+                "crawfish": { "name": "Garlic Crawfish", "image": "photos/crawfish.JPG" },
+                "pork": { "name": "Stewed Pork with Carrots and Potatoes", "image": "photos/pork.JPG" }
+            };
+
+            return dishes[food];
+        }
+
+    </script>
+    
+</body>
+</html>
