@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadLibs 2.0</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dela+Gothic+One&family=Libre+Franklin:wght@300;400;500;600;700;800&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="banner-container">
+            <img src="images/banner.png" alt="banner" height="200">
+            <h1>MadLibs 2.0</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <section class="madlibs-description">
+                <h2>What is Mad Libs?</h2>
+                <p>Mad Libs is a word game. You get a story with blank spaces. Each space asks for a specific type of word, like a noun or adjective. You fill in the blanks without knowing the full story. When you read it all together, it often turns out funny and unexpected.</p>
+                <p>Get ready to fill in the blanks on the right!</p>
+            </section>
+            
+            <section class="madlibs-form">
+                <form id="madLibsForm">
+                    <div class="cc1">
+                        <label for="animal">Enter an animal:</label>
+                        <input type="text" id="animal" required>
+            
+                        <label for="adjectives">Enter two adjectives:</label>
+                        <input type="text" id="adjective1" required>
+                        <input type="text" id="adjective2" required>
+            
+                        <label for="sound">Enter a type of sound:</label>
+                        <input type="text" id="sound" required>
+                    </div>
+                    <div class="cc2">
+                        <label for="verbs">Enter three verbs:</label>
+                        <input type="text" id="verb1" required>
+                        <input type="text" id="verb2" required>
+                        <input type="text" id="verb3" required>
+            
+                        <label for="noun">Enter a noun:</label>
+                        <input type="text" id="noun" required>
+            
+                        
+                    </div>
+                    <input type="submit" value="Create MadLibs">
+
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
