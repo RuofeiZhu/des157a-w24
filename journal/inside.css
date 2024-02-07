@@ -27,6 +27,11 @@ footer {
     text-align: center;
     padding: 10px;
     border-top: 1px solid #000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
 }
 
 footer a{
@@ -42,6 +47,7 @@ footer a{
 
 body{
     background-color: #fff;
+    padding-bottom: 5%;
 }
 
 .main1{
@@ -72,19 +78,36 @@ nav a{
 }
 
 img{
-    width: 70%;
+    width: 100%;
 }
 
 .main1 {
     display: flex;
     justify-content: space-between;
-    margin: 3%;
+    margin: 2%
 }
 
 article{
-    padding: 0 15%;
+    padding: 2% 5% 2% 10%;
+
 }
-aside{
+/* aside{
     padding: auto;
-    width: 100%;
+    width: 40%;
+} */
+
+
+/*---- inside3 ul li ----*/
+li{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+.thoughts1{
+    width:90%;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.4em;
 }
