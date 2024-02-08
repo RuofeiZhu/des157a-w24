@@ -33,33 +33,41 @@
                         <label for="animal">Enter an animal:</label>
                         <input type="text" id="animal" required>
             
-                        <label for="adjectives">Enter two adjectives:</label>
-                        <input type="text" id="adjective1" required>
-                        <input type="text" id="adjective2" required>
+                        <label for="food">Enter a food:</label>
+                        <input type="text" id="food" required>
             
-                        <label for="sound">Enter a type of sound:</label>
-                        <input type="text" id="sound" required>
+                        <label for="emotion">Enter a type of adjective emotion:</label>
+                        <input type="text" id="emotion" required>
+            
+                        <label for="adjective">Enter a adjective:</label>
+                        <input type="text" id="adjective" required>
                     </div>
                     <div class="cc2">
+                        <label for="sound">Enter a type of sound:</label>
+                        <input type="text" id="sound" required>
+
                         <label for="verbs">Enter three verbs:</label>
                         <input type="text" id="verb1" required>
                         <input type="text" id="verb2" required>
                         <input type="text" id="verb3" required>
-            
-                        <label for="noun">Enter a noun:</label>
-                        <input type="text" id="noun" required>
-
-
                         <br>
-
-                        <input type="submit" value="Create MadLibs">
+                        <input type="submit" value="Create MadLibs" class="submit">
                     </div>
-                
                    
 
                 </form>
             </section>
         </div>
     </main>
+
+    <section id="overlay" class="showing">
+        <article>
+            <h2>MadLibs Story</h2>
+            <p id="storyResult"></p>
+            <button class="close">close</button>
+        </article>
+    </section>
+
+    
 </body>
 </html>
