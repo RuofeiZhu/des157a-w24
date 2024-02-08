@@ -139,9 +139,10 @@ input, label {
 
 #madLibsForm {
     display: flex;
-    justify-content: space-between 10; 
+    justify-content: space-between; 
     flex-wrap: wrap; 
 }
+
 
 .cc1, .cc2 {
     flex-basis: 35%; 

@@ -35,14 +35,16 @@
         overlay.className = "hidden";
     });
 
-    document.querySelector('.open').addEventListener('click', function(){
-        document.querySelector('#overlay').className = "showing";
-    });
+    
 
     document.querySelector('.close').addEventListener('click', function(){
         document.querySelector('#overlay').className = "hidden";
     });
 
+    document.querySelector('.open').addEventListener('click', function(){
+        document.querySelector('#overlay').className = "showing";
+    });
+    
     // 'Escape' key event listener
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
