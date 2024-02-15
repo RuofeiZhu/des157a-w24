@@ -1,0 +1,80 @@
+/* Base styles to maintain normalization and font inclusion */
+body {
+    background-color: #fff;
+    font-family: 'Libre Franklin', sans-serif;
+    padding-bottom: 5%;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 2vw;
+    border-bottom: 2px solid #000;
+}
+
+.title {
+    font-family: 'Monoton', sans-serif;
+    font-size: 4vw;
+}
+
+.nav a, footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Main content styling */
+.main1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+}
+
+article {
+    padding: 2% 5% 2% 10%;
+    width: 90%;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-indent: 2em;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.4em;
+}
+
+/* Figure and Figcaption styling */
+figure {
+    float: right;
+}
+
+figcaption {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #8d8d8d;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+/* Additional styles for images and specific elements */
+#ppz {
+    width: 50%;
+    padding: 20%;
+}
