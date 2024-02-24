@@ -1,0 +1,165 @@
+.gallery img {
+  /* Adjustments for zoom effect */
+  transition: transform 0.5s ease-in-out;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Libre Franklin', sans-serif;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Monoton', sans-serif;
+  font-size: 3em;
+  position: fixed;
+  top: 2%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  z-index: 101; /* Ensure it is above the overlay and other content */
+}
+
+.gallery {
+  display: flex;
+width: 100vw;
+height: 80vh;
+position: fixed;
+  /* z-index:100; */
+top: 5%;
+  left: 45%; /* Center based on the left edge */
+  transform: translateX(-50%);
+overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5%; /* space for caption bar */
+}
+
+
+.gallery img {
+  width: calc(11% - 1%); /* Adjust the width*/
+  margin: 5px;
+  transition: transform 0.3s ease;
+}
+
+.caption-bar {
+  position: absolute; /* Changed to absolute */
+  bottom: 20%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 102; /* Ensure it is above most other content but adjust as needed */
+}
+
+.gallery img.zoomed {
+  transform: scale(2);
+  z-index: 10;
+  position: relative;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 1000px) {
+  .gallery img {
+      width: calc(30% - 7px); /* larger images for smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery img {
+      width: calc(46% - 4px); /* full width images for mobile screens */
+  }
+}
+
+
+/* ------------ overlayyyyyy -------------*/
+.hidden { display: none; }
+.showing { display: flex; }
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 50%; /* Center based on the left edge */
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 100; /* Ensure it's above all other content */
+  padding: 15%;
+
+  transition: opacity 0.5s ease; /* Smooth transition for the opacity */
+  opacity: 0; /* Start with the overlay being transparent */
+  pointer-events: none; /* Prevents interaction when overlay is hidden */
+}
+
+#overlay.showing {
+  opacity: 1; /* Fully visible when active */
+  pointer-events: auto; /* Allows interaction when overlay is shown */
+}
+
+.overlay-content {
+  position: relative;
+  padding: 20px;
+}
+
+#overlay img {
+  max-width: 50%;
+  max-height: 50%;
+  align-items: center;
+}
+
+.close {
+  position: absolute;
+  top: 1%;
+  right: 1%; 
+  font-size: 2em; 
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+@keyframes zoomUp {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.1) translateY(-1%);
+  }
+}
+.zoom-up {
+animation: zoomUp 0.5s forwards;
+}
+
+
+
+section {
+height: 80vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+/* border: 2px solid #000; */
+margin: 5%;
+padding: 5%;
+}
+
+p {
+line-height: 0.1em;
+}

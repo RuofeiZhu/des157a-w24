@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie Gallery</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dela+Gothic+One&family=Libre+Franklin:wght@300;400;500;600;700;800&family=Monoton&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div>
+        <h1>FOODIE</h1>
+    </div>
+
+    <main>
+		<section id="sect1">
+			<article>
+			</article>
+		</section>
+
+		<section id="second">
+			<article>
+			</article>
+		</section>
+
+		<section id="third">
+			<article>
+			</article>
+		</section>
+
+		<section id="fourth">
+			<article>
+			</article>
+		</section>
+
+		<section id="fifth">
+			<article>
+			</article>
+		</section>
+		
+		<section id="sixth">
+			<article>
+			</article>
+		</section>
+	</main>
+    
+    <div class="gallery">
+        <!-- one -->
+        <img src="foodie/placeholder.png" class="photo" alt="placeholder">
+        <img src="foodie/bovinebonemarrow.JPG" class="photo" alt="Bovine Bone Marrow">
+        <img src="foodie/breakfast.jpg" class="photo" alt="Breakfast">
+        <img src="foodie/chadian.JPG" class="photo" alt="Chadian Cuisine">
+        <img src="foodie/placeholder.png" class="photo" alt="placeholder">
+        <img src="foodie/turkish.jpg" class="photo" alt="Turkish Meal">
+        <img src="foodie/escargo.jpg" class="photo" alt="Escargo">
+        <img src="foodie/family.JPG" class="photo" alt="Family Meal">
+        <img src="foodie/placeholder.png" class="photo" alt="placeholder">
+        <!-- two -->
+        <img src="foodie/french1.jpg" class="photo" alt="French Cuisine 1">
+        <img src="foodie/niushemian.jpg" class="photo" alt="Niushemian">
+        <img src="foodie/macau.JPG" class="photo" alt="Macau Dish">
+        <img src="foodie/korean1.JPG" class="photo" alt="Korean Cuisine">
+        <img src="foodie/french3.JPG" class="photo" alt="French Cuisine 3">
+        <img src="foodie/nang.JPG" class="photo" alt="Nang">
+        <img src="foodie/tieguodun.JPG" class="photo" alt="Tieguodun">
+        <img src="foodie/niurouguo.JPG" class="photo" alt="Niurouguo">
+        <img src="foodie/french2.jpg" class="photo" alt="French Cuisine 2">
+        <!-- three -->
+        <img src="foodie/yangxiezi.JPG" class="photo" alt="Yangxiezi">
+        <img src="foodie/shanyumian.png" class="photo" alt="Shanyumian">
+        <img src="foodie/tiandihaozhai.jpg" class="photo" alt="Tiandihaozhai">
+        <img src="foodie/placeholder.png" class="photo" alt="placeholder">
+        <img src="foodie/coffee.JPG" class="photo" alt="Coffee">
+        <img src="foodie/wenzhou.JPG" class="photo" alt="Wenzhou Dish">
+        <img src="foodie/xiejiaomian.jpg" class="photo" alt="Xiejiaomian">
+        <img src="foodie/portugal.JPG" class="photo" alt="Portuguese Cuisine">
+        <img src="foodie/placeholder.png" class="photo" alt="placeholder">
+    </div>
+    <figure class="caption-bar">
+        <!-- Captions are dynamically updated via JavaScript -->
+        <figcaption class="animate enterup">
+            1. Here are food from different regions, click to zoom out and scroll to see where they come from and what similarity and difference they have!
+			2. 234
+			3. 345
+			4. 456
+			5. 567
+			6. 678
+        </figcaption>
+    </figure>
+    <div id="overlay" class="hidden">
+        <div class="overlay-content">
+            <img id="zoomed-image" src="foodie/placeholder.png" alt="Zoomed" style="display: none;">
+            <p id="image-description">Image description goes here...</p> <!-- This is the new element for the description -->
+            <button class="close">&times;</button>
+        </div>
+    </div>
+</body>
+</html>
