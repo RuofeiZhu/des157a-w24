@@ -128,7 +128,7 @@ span:before, span:after {
     height: 1.5px;
     top: 80%;
     margin-top: -0.5px;
-    background: linear-gradient(270deg, #F8AFCA, #F5772D, #68BDBA, #316443);
+    background: linear-gradient(270deg, #ffa6c7, #f26d20, #8968bd, #1bcd48);
 }
   
 span:before {
