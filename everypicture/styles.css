@@ -106,16 +106,34 @@ overflow: hidden;
   opacity: 0; /* Start with the overlay being transparent */
   pointer-events: none; /* Prevents interaction when overlay is hidden */
 }
+.overlay-content {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+}
+
+/* .overlay-photo {
+  width: 50%;
+  height: auto;
+  margin-right: 20px;
+} */
+
+.overlay-text {
+  width: calc(50% - 20px);
+}
+
 
 #overlay.showing {
   opacity: 1; /* Fully visible when active */
   pointer-events: auto; /* Allows interaction when overlay is shown */
 }
 
-.overlay-content {
+/* .overlay-content {
   position: relative;
   padding: 20px;
-}
+} */
 
 #overlay img {
   max-width: 50%;
@@ -133,7 +151,19 @@ overflow: hidden;
   border: none;
   cursor: pointer;
 }
-
+#image-description {
+  color: white; 
+  line-height:1.5em;
+  width: 50%; 
+  /* margin: 20px auto; Center the element horizontally and add some space */
+  font-size: 1em; 
+  /* z-index: 105; Ensure it's above the overlay content */
+  position: relative; 
+  bottom: 10%; 
+  left: 50%; 
+  transform: translateX(-110%); 
+  width: calc(40%);
+}
 
 
 @keyframes zoomUp {

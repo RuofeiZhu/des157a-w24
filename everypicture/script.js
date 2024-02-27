@@ -8,6 +8,7 @@
     const overlay = document.getElementById('overlay'); // The overlay that will display the zoomed image
     const zoomedImage = document.getElementById('zoomed-image'); // The image element within the overlay for showing the zoomed image
     const closeBtn = document.querySelector('.close'); // The button used to close the overlay
+    const imageDescription = document.getElementById('image-description');
 
     // References and setup for gallery scrolling and caption functionality
     const gallery = document.querySelector('.gallery'); // The container for the gallery images
@@ -73,6 +74,7 @@
                 zoomedImage.style.display = 'block'; // Makes the zoomed image visible
                 overlay.classList.remove('hidden'); // Shows the overlay
                 overlay.classList.add('showing'); // Applies showing class for styling
+                imageDescription.textContent = this.dataset.description;
             }
         });
     });
