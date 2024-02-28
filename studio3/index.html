@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On!</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dela+Gothic+One&family=Libre+Franklin:wght@300;400;500;600;700;800&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="title">Game of Pig</div>
+        <!-- <nav class="nav">
+            <a href="index.html">Go Back to Main Page</a>
+        </nav> -->
+    </header>
+
+    <main>
+        <h1><strong>What is Game of Pig?</strong></h1>
+
+        <p>
+            There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a “one”. If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a “one” was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.
+            <br>
+            Oh, and if you roll two “ones” (snake eyes), your current score gets zeroed out. So don’t do that.
+        </p>
+        <p><strong>Randomly Pick the First Player, and Start the Game!</strong></p>
+        <div class="start-button-container">
+            <p id="start">START</p>
+        </div>
+        
+        <!-- <div id="overlay" class="hidden">
+            <div class="overlay-content">
+                <div id="game"></div>
+                <div id="actions"></div>
+                <div id="score"></div> -->
+                <!-- <button class="close">&times;</button> -->
+            <!-- </div>
+        </div> -->
+        
+        <!-- Overlay, initially hidden -->
+        <div id="overlay" class="hidden">
+            <div class="overlay-h">
+                <h2>Playing Game of Pig</h2>
+                <button id="x">Close</button>
+            </div>
+            <div class="overlay-content">
+                <div class="player">
+                    <h3>Player 1</h3>
+                    <img src="dice1.png" alt="Dice for Player 1">
+                    <p>Score: <span id="score-player1">0</span></p>
+                </div>
+                <div class="player">
+                    <h3>Player 2</h3>
+                    <img src="dice2.png" alt="Dice for Player 2">
+                    <p>Score: <span id="score-player2">0</span></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    
+</body>
+</html>
