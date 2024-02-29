@@ -24,12 +24,12 @@
     <main>
         <h1><strong>What is Game of Pig?</strong></h1>
 
-        <p>
+        <p class="p1">
             There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a “one”. If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a “one” was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.
             <br>
             Oh, and if you roll two “ones” (snake eyes), your current score gets zeroed out. So don’t do that.
         </p>
-        <p><strong>Randomly Pick the First Player, and Start the Game!</strong></p>
+        <p class="p1"><strong>Randomly Pick the First Player, and Start the Game!</strong></p>
         <div class="start-button-container">
             <p id="start">START</p>
         </div>
@@ -50,6 +50,7 @@
                 <button id="x">X</button>
                 <!-- <button class="close">&times;</button> -->
             </div>
+
             <div class="overlay-content">
                 <div class="player">
                     <h3>Player 1</h3>
@@ -60,6 +61,16 @@
                     <h3>Player 2</h3>
                     <img src="dice2.png" alt="Dice for Player 2">
                     <p>Score: <span id="score-player2">0</span></p>
+                </div>
+            </div>
+
+
+            <div class="overlay-3">
+                <div class="choose">
+                    <p class="roll">Pass</p>
+                </div>
+                <div class="choose">
+                    <p class="roll">Roll</p>
                 </div>
             </div>
         </div>

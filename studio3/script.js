@@ -4,6 +4,8 @@
 
     
 
+    
+
     document.getElementById('start').addEventListener('click', function() {
         document.getElementById('overlay').classList.remove('hidden');
     });
