@@ -57,15 +57,6 @@
         }
     });
 
-    // Enables zoom functionality on click for each image in the gallery
-    // document.querySelectorAll('.gallery img').forEach(img => {
-    //     img.addEventListener('click', function() {
-    //         zoomedImage.src = this.src; // Sets the zoomed image's source to that of the clicked image
-    //         overlay.classList.remove('hidden'); // Shows the overlay
-    //         overlay.classList.add('showing'); // Applies a class for potential animation or styling
-    //     });
-    // });
-
     document.querySelectorAll('.gallery img').forEach(img => {
         img.addEventListener('click', function() {
             // Example check to ignore clicks on placeholder images
