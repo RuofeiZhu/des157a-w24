@@ -33,6 +33,7 @@ main {
     flex-direction: row;
     border-left: #000 2px solid; 
     border-right: #000 2px solid; 
+    align-items: flex-start;
 }
 
 .row1 p{

@@ -74,20 +74,24 @@ overflow: hidden;
 /* Responsive design for smaller screens */
 @media (max-width: 1000px) {
   .gallery img {
-      width: calc(30% - 7px); /* larger images for smaller screens */
+      width: calc(30% - 7px); 
   }
 }
 
 @media (max-width: 500px) {
   .gallery img {
-      width: calc(46% - 4px); /* full width images for mobile screens */
+      width: calc(46% - 4px); 
   }
 }
 
 
 /* ------------ overlayyyyyy -------------*/
-.hidden { display: none; }
-.showing { display: flex; }
+.hidden { 
+  display: none;
+}
+.showing { 
+  display: flex; 
+}
 
 #overlay {
   position: fixed;
@@ -101,24 +105,16 @@ overflow: hidden;
   justify-content: center;
   z-index: 100; /* Ensure it's above all other content */
   padding: 15%;
-
-  transition: opacity 0.5s ease; /* Smooth transition for the opacity */
-  opacity: 0; /* Start with the overlay being transparent */
-  pointer-events: none; /* Prevents interaction when overlay is hidden */
 }
+
 .overlay-content {
   position: relative;
   padding: 20px;
   width: 100%;
   max-width: 1000px;
   display: flex;
+  align-items: flex-start;
 }
-
-/* .overlay-photo {
-  width: 50%;
-  height: auto;
-  margin-right: 20px;
-} */
 
 .overlay-text {
   width: calc(50% - 20px);
@@ -129,11 +125,6 @@ overflow: hidden;
   opacity: 1; /* Fully visible when active */
   pointer-events: auto; /* Allows interaction when overlay is shown */
 }
-
-/* .overlay-content {
-  position: relative;
-  padding: 20px;
-} */
 
 #overlay img {
   max-width: 50%;
