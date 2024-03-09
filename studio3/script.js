@@ -97,7 +97,7 @@
         setTimeout(function() {
             setUpTurn();
             updateActivePlayer(); // Ensure the visual update happens after the turn is set up
-        }, 2000); // Ensure this delay does not affect the update of scores and dice images
+        }, 100); // Ensure this delay does not affect the update of scores and dice images
     }
 
     function updateActivePlayer() {
