@@ -31,17 +31,8 @@
         </p>
         <p class="p1"><strong>Randomly Pick the First Player, and Start the Game!</strong></p>
         <div class="start-button-container">
-            <p id="start">START</p>
+            <button id="start" class="start-button">START</button>
         </div>
-        
-        <!-- <div id="overlay" class="hidden">
-            <div class="overlay-content">
-                <div id="game"></div>
-                <div id="actions"></div>
-                <div id="score"></div> -->
-                <!-- <button class="close">&times;</button> -->
-            <!-- </div>
-        </div> -->
         
         <!-- Overlay, initially hidden -->
         <div id="overlay" class="hidden">
@@ -52,31 +43,49 @@
             </div>
 
             <div class="overlay-content">
-                <div class="player">
+                <div class="player" id="player1">
                     <!-- <h3>Player 1</h3> -->
                     <img src="photos/pig1.png" alt="Player1" width="100px" class="pig">
-                    <img src="dice1.png" alt="Dice for Player 1">
-                    <p>Score: <span id="score-player1">0</span></p>
+                    <div>
+                        <img src="photos/dice1.png" class="dice1" alt="Dice for Player 1" width="80px">
+                        <img src="photos/dice1.png" class="dice2" alt="Dice for Player 2" width="80px">
+                    </div>
+                    
+                    <p><span id="score-player1">0</span></p>
                 </div>
-                <div class="player">
+                <div class="player" id="player2">
                     <!-- <h3>Player 2</h3> -->
                     <img src="photos/pig2.png" alt="Player2" width="100px" class="pig">
-                    <img src="dice2.png" alt="Dice for Player 2">
-                    <p>Score: <span id="score-player2">0</span></p>
+                    <div>
+                        <img src="photos/dice1.png" class="dice3" alt="Dice for Player 1" width="80px">
+                        <img src="photos/dice1.png" class="dice4" alt="Dice for Player 2" width="80px">
+                    </div>
+                    <p><span id="score-player2">0</span></p>
                 </div>
+            
+            </div><div id="message">
+
             </div>
 
 
-            <div class="overlay-3">
+             <div class="overlay-3">
                 <div class="choose">
-                    <p class="roll">Pass</p>
+                    <p class ="pass">Pass</p>
                 </div>
                 <div class="choose">
-                    <p class="roll">Roll</p>
+                    <p class ="roll">Roll</p>
                 </div>
             </div>
+            <!-- <div class="overlay-3">
+                <div class="choose">
+                    <button class="pass">Pass</button>
+                </div>
+                <div class="choose">
+                    <button class="roll">Roll</button>
+                </div>
+            </div> -->
+
         </div>
-
     </main>
     
     
