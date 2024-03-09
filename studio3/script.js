@@ -38,7 +38,7 @@
     function setUpTurn(){
         message.innerHTML = `<p>Roll the dice for ${gameData.players[gameData.index]}</p>`;
         showRollAndPassOptions();
-        updateActivePlayer();//
+        updateActivePlayer();
     }
 
 
@@ -74,6 +74,7 @@
        Updates the dice images on the game board.
     */
     
+
        function updateDiceImages() {
         // Check which player's turn it is and update the dice images accordingly
         if (gameData.index === 0) {
@@ -85,6 +86,7 @@
             dice3.src = gameData.dice[gameData.roll1 - 1]; // Assuming dice3 & dice4 are for Player 2
             dice4.src = gameData.dice[gameData.roll2 - 1]; // Adjust according to your actual HTML setup
         }
+        
     }
     
     
@@ -128,14 +130,21 @@
         console.log(score2.innerHTML);
     }
 
+
+    const successSound = new Audio('sounds/success.mp3');
+
     function checkWinningCondition() {
 
         if (gameData.score[gameData.index] > gameData.gameEnd) {
-            gameControl.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2> <br>`;  //why <br> doesn't work
-            // Hide the overlay, as the game has ended
-            document.getElementById('overlay').classList.add('hidden');
+            successSound.play().catch(error => console.error("Playback failed", error));  
+            //? complicated, but don't know how to make this more simple
+            gameControl.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2> <br>`;  
+            //why <br> doesn't work
+
+            document.getElementById('overlay').classList.add('hidden'); // Hide the overlay, as the game has ended
     
             gameControl.innerHTML += '<button id="newGame">Start a New Game</button>';
+            
             document.getElementById('newGame').addEventListener('click', function () {
                 location.reload();
             });
@@ -187,4 +196,68 @@
             document.getElementById('overlay').className = 'hidden';
         }
     });
+
+    //-------------------sound--------------------------
+    // const clickBtn = document.getElementById('start');
+    // // const clickStart = document.getElementById('newGame');
+    // const clickSound = new Audio('sounds/click.mp3');
+
+    // clickBtn.addEventListener('mousedown', function () {
+    //     clickSound.play();
+    // });
+    // clickStart.addEventListener('mousedown', function () {
+    //     clickSound.play();
+    // });
+
+    // const closeBtn = document.getElementById('x');
+    // const closeSound = new Audio('sounds/close.mp3');
+
+    // closeBtn.addEventListener('mousedown', function () {
+    //     closeSound.play();
+    // });
+    
+    
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Existing setup for the start button sound
+        const clickBtn = document.getElementById('start');
+        const clickSound = new Audio('sounds/click.mp3');
+
+        const diceRollSound = new Audio('sounds/diceroll.mp3');
+
+        clickBtn.addEventListener('mousedown', function () {
+            clickSound.play();
+        });
+    
+        // Setup for the roll button sound
+        const rollButton = document.querySelector('.roll'); // Assumes there's a single element with class 'roll'
+        rollButton.addEventListener('mousedown', function() {
+            diceRollSound.play();
+        });
+    
+        // Setup for the pass button sound
+        const passButton = document.querySelector('.pass'); // Assumes there's a single element with class 'pass'
+        passButton.addEventListener('mousedown', function() {
+            diceRollSound.play();
+        });
+    
+        // Existing setup for the close button sound
+        const closeBtn = document.getElementById('x');
+        const closeSound = new Audio('sounds/close.mp3');
+
+        closeBtn.addEventListener('mousedown', function () {
+            closeSound.play();
+        });
+
+
+
+    });
+    
+    
+
+
 })();
+
+
+
+
