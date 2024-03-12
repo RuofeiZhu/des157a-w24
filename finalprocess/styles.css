@@ -1,0 +1,155 @@
+
+h1 {
+    font-family: 'Monoton', sans-serif;
+    font-size: 4vw;
+    padding: 1vw; 
+    display: inline-block; 
+
+    animation-name: colorChange;
+    animation-duration: 7s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
+}
+
+@keyframes colorChange {
+    0%, 10%, 90%, 100% {
+        background-color: white;
+        color: black;
+    }
+    40%, 60% {
+        background-color: black;
+        color: white;
+    }
+}
+
+.banner-container {
+    position: relative; 
+    text-align: center; 
+}
+
+.banner-container img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.banner-container h1 {
+    width: 60%;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: white; 
+    padding: 10px; 
+    margin: 0; 
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 0.3vw solid #000;
+    transition: box-shadow 0.3s ease;
+}
+header div img:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+
+/*--------------body-------------*/
+
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+/* 
+.story {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.story p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px; 
+}
+
+.unique-serif {
+    font-family: 'Abril Fatface', serif;
+} */
+
+
+/* Main content styling */
+.main1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+    width: 80%;
+}
+
+article {
+    padding: 2% 5% 2% 10%;
+    width: 90%;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+/* Figure and Figcaption styling */
+figure {
+    float: right;
+    margin: 3px;
+}
+figure img{
+    border: #000 solid 1px;
+}
+
+.div1{
+    display: flex;
+    padding: 0%;
+}
+.div1 p{
+    width: 30%;
+    padding-right: 2%;
+}
+
+figcaption {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #8d8d8d;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+/* Additional styles for images and specific elements */
+#ppz {
+    width: 50%;
+    padding: 20%;
+}
