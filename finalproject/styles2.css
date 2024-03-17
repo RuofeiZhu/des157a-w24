@@ -1,0 +1,188 @@
+/* *{
+    box-sizing: border-box;
+  } */
+  
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120%;
+    font-family: 'Libre Franklin', sans-serif;
+    position: relative;
+}
+
+/* -------- header --------*/
+#header{
+    text-align: left;
+    font-family: 'Monoton', sans-serif;
+    font-size: 4vw;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 100; /* Ensure it is above the overlay and other content */
+}
+
+  
+/*---------------gallery photos---------------*/
+.gallery {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    position: fixed;
+    top: 5%;
+    left: 45%; /* Center based on the left edge */
+    transform: translateX(-50%);
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5%; /* space for caption bar */
+}
+  
+.gallery img {
+    width: calc(11% - 1%); /* Adjust the width*/
+    margin: 5px;
+    /* Adjustments for zoom effect */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* -------zoom up smoothly------- */
+.photo {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    width: calc(11% - 1%); /* Adjust the width as per your design */
+    margin: 5px;
+}
+
+.photo.zoomed {
+    transform: scale(1.3); /* Slightly zoomed in */
+    /* Ensure smooth transition for zoom and opacity changes */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 2; /* Make sure zoomed photo is above others */
+}
+
+/* -------caption------- */
+.caption-bar {
+    position: absolute; /* Changed to absolute */
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+
+    width: 40%;
+    border: 2px solid #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 101; 
+
+    transition: all;
+}
+
+.animate-enterup{
+    padding: 0% 5%;
+    font-family: 'Libre Franklin', sans-serif;
+    color: #000;
+    line-height: 1.5em;
+    font-size: 0.9em;
+    text-align: center;
+    
+}
+
+  
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 1000px) {
+    .gallery img {
+        width: calc(30% - 7px); 
+    }
+    .gallery {
+        height: 300vh;
+        position:relative;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .gallery img {
+        width: calc(46% - 4px); 
+    }
+    .gallery {
+        position:relative;
+        height: 500vh;
+    }
+  }
+  
+  
+  /* ------------ overlayyyyyy -------------*/
+figcaption {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #cfcfcf;
+    text-align: left;
+    font-size: 0.8em;
+    cursor: grab;
+}
+
+/* Hidden class to initially hide overlays */
+.overlay.hidden {
+    display: none; 
+  }
+
+
+  
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 150; /* Ensure it's above all other content */
+}
+
+
+  
+.overlay article {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+}
+.overlay p{
+
+    padding: 20px;
+    max-width: 28%;
+    position: absolute;
+    top: 48%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+    line-height:1.5em;
+    font-size: 1em; 
+}
+  
+.overlay img {
+    max-width: 60%;
+    align-items: center;
+}
+/* 
+.showing { 
+    display: flex; 
+} */
+  
+
+@keyframes zoomUp {
+    from {
+      transform: scale(1) translateY(0);
+    }
+    to {
+      transform: scale(1.1) translateY(-1%);
+    }
+  }
+  .zoom-up {
+  animation: zoomUp 0.5s forwards;
+}
